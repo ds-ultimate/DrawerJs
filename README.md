@@ -124,6 +124,8 @@ Please look at [CanvasElement documentation](DrawerJs.CanvasElement.html) for op
 
 Requirements: node.js, npm, git
 
+!!use the dev branch since there are some changes in master, so that development is impossible with that version!!
+
 `npm install` to install all npm/bower dependencies.
 
 `npm start` to compile everything to `dist` folder.
