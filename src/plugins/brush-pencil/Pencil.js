@@ -51,7 +51,7 @@
     this.toolOptionsList = ['color', 'opacity', 'brushSize'];
 
     this.btnClass = 'btn-pencil';
-    this.faClass = 'fa-pencil';
+    this.faClass = 'fa-pencil-alt';
     this.tooltip = drawerInstance.t('Free drawing mode');
 
     _this._defaultOptions = {
