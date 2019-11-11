@@ -1,4 +1,4 @@
-/*! drawerjs - 1.2.2
+/*! drawerjs - 1.2.3
  */
 
 .editable-canvas-toolbar,
@@ -2452,8 +2452,8 @@ ul.editable-canvas-toolbar.toolbar-topRight li.editable-canvas-fontfamily .fonts
 .border-type-dropdown-cloned ul {
     padding: 0;
 }
-.toolbar-button .fa.fa-long-arrow-right ,
-.toolbar-button .fa.fa-arrows-h {
+.toolbar-button .fa.fa-long-arrow-alt-right ,
+.toolbar-button .fa.fa-arrows-alt-h {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);

@@ -1,4 +1,4 @@
-/*! drawerjs - 1.2.2
+/*! drawerjs - 1.2.3
  */
 
 /*! Fabric.js Copyright 2008-2015, Printio (Juriy Zaytsev, Maxim Chernyak) */
@@ -38453,7 +38453,7 @@ ToolOptionsToolbar.prototype.customScrollMode = true;
     this.toolOptionsList = ['color', 'opacity', 'brushSize'];
 
     this.btnClass = 'btn-pencil';
-    this.faClass = 'fa-pencil';
+    this.faClass = 'fa-pencil-alt';
     this.tooltip = drawerInstance.t('Free drawing mode');
 
     _this._defaultOptions = {
@@ -41090,7 +41090,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
     var moveButtonConf = {
           buttonOrder: this.options.buttonOrder,
           additionalClass: 'btn-move',
-          iconClass: 'fa-arrows',
+          iconClass: 'fa-arrows-alt',
           tooltipText: this.drawer.t('Move canvas')
         },
         $moveButton = toolbar.addButton(moveButtonConf);
@@ -44329,9 +44329,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
    * Save current color into transparentSaveColor
    */
   ColorTool.prototype.saveColor = function () {
-    console.log("saving");
     if(!this.transparentSaveColor) {
-      console.log("saving1");
       this.transparentSaveColor = this.drawer.activeColor;
     }
   };
@@ -44340,9 +44338,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
    * Load color from transparentSaveColor
    */
   ColorTool.prototype.restoreColor = function () {
-    console.log("restoring");
     if(this.transparentSaveColor) {
-      console.log("restoring1");
       this._onColorSelected(this.transparentSaveColor);
       this.colorControl.setColor(this.transparentSaveColor);
       this.transparentSaveColor = null;
@@ -45376,7 +45372,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
   LineWidth.prototype.preventHightlight = false;
   LineWidth.prototype.buttonMode = false;
 
-  LineWidth.prototype.buttonIconClass = 'fa-arrows-h';
+  LineWidth.prototype.buttonIconClass = 'fa-arrows-alt-h';
 
   LineWidth.prototype._defaultOptions = {
     digitsAfterDecimalPoint: 0
@@ -45763,7 +45759,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
   StrokeWidth.prototype.preventHightlight = false;
   StrokeWidth.prototype.buttonMode = false;
 
-  StrokeWidth.prototype.buttonIconClass = 'fa-arrows-h';
+  StrokeWidth.prototype.buttonIconClass = 'fa-arrows-alt-h';
 
   StrokeWidth.prototype._defaultOptions = {
     digitsAfterDecimalPoint: 0
@@ -46800,7 +46796,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
   TextLineHeight.prototype.hideOnEditMode = true;
   TextLineHeight.prototype.stylesToObject = true;
   TextLineHeight.prototype.preventHightlight = true;
-  TextLineHeight.prototype.buttonIconClass = 'fa-arrows-v';
+  TextLineHeight.prototype.buttonIconClass = 'fa-arrows-alt-v';
   TextLineHeight.prototype.onlyPredefined = true;
 
   TextLineHeight.prototype.valueType = {
@@ -47388,7 +47384,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
     this.toolOptionsList = ['border', 'opacity', 'lineWidth', 'strokeWidth'];
 
     this.btnClass = 'btn-arrow-one-side';
-    this.faClass = 'fa-long-arrow-right';
+    this.faClass = 'fa-long-arrow-alt-right';
     this.tooltip = drawerInstance.t('Draw an arrow');
     this.group = {
       name: 'lines',
@@ -47568,7 +47564,7 @@ CloseButton.prototype._onCloseButtonClick = function() {
     this.toolOptionsList = ['border', 'opacity', 'lineWidth', 'strokeWidth'];
 
     this.btnClass = 'btn-arrow-two-side';
-    this.faClass = 'fa-arrows-h';
+    this.faClass = 'fa-arrows-alt-h';
     this.tooltip = drawerInstance.t('Draw a two-sided arrow');
     this.group = {
       name: 'lines',
