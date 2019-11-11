@@ -32,7 +32,7 @@
   StrokeWidth.prototype.preventHightlight = false;
   StrokeWidth.prototype.buttonMode = false;
 
-  StrokeWidth.prototype.buttonIconClass = 'fa-arrows-h';
+  StrokeWidth.prototype.buttonIconClass = 'fa-arrows-alt-h';
 
   StrokeWidth.prototype._defaultOptions = {
     digitsAfterDecimalPoint: 0

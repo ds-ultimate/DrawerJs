@@ -110,7 +110,7 @@
     var moveButtonConf = {
           buttonOrder: this.options.buttonOrder,
           additionalClass: 'btn-move',
-          iconClass: 'fa-arrows',
+          iconClass: 'fa-arrows-alt',
           tooltipText: this.drawer.t('Move canvas')
         },
         $moveButton = toolbar.addButton(moveButtonConf);

@@ -31,7 +31,7 @@
     this.toolOptionsList = ['border', 'opacity', 'lineWidth', 'strokeWidth'];
 
     this.btnClass = 'btn-arrow-one-side';
-    this.faClass = 'fa-long-arrow-right';
+    this.faClass = 'fa-long-arrow-alt-right';
     this.tooltip = drawerInstance.t('Draw an arrow');
     this.group = {
       name: 'lines',

@@ -29,7 +29,7 @@
     this.toolOptionsList = ['border', 'opacity', 'lineWidth', 'strokeWidth'];
 
     this.btnClass = 'btn-arrow-two-side';
-    this.faClass = 'fa-arrows-h';
+    this.faClass = 'fa-arrows-alt-h';
     this.tooltip = drawerInstance.t('Draw a two-sided arrow');
     this.group = {
       name: 'lines',

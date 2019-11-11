@@ -32,7 +32,7 @@
   TextLineHeight.prototype.hideOnEditMode = true;
   TextLineHeight.prototype.stylesToObject = true;
   TextLineHeight.prototype.preventHightlight = true;
-  TextLineHeight.prototype.buttonIconClass = 'fa-arrows-v';
+  TextLineHeight.prototype.buttonIconClass = 'fa-arrows-alt-v';
   TextLineHeight.prototype.onlyPredefined = true;
 
   TextLineHeight.prototype.valueType = {

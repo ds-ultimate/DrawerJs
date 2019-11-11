@@ -32,7 +32,7 @@
   LineWidth.prototype.preventHightlight = false;
   LineWidth.prototype.buttonMode = false;
 
-  LineWidth.prototype.buttonIconClass = 'fa-arrows-h';
+  LineWidth.prototype.buttonIconClass = 'fa-arrows-alt-h';
 
   LineWidth.prototype._defaultOptions = {
     digitsAfterDecimalPoint: 0
