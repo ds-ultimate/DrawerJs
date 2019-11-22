@@ -71,7 +71,7 @@
           try {
             result = handler.apply(elem, [event]);
           } catch(err){
-              var errorName = 'Catched error - ' + 'click.' + ns;
+              let errorName = 'Catched error - ' + 'click.' + ns;
               console.groupCollapsed(errorName);
               console.log('%c[' + 'Event name' + ']', 'color: green', 'click.' + ns);
               console.log('%c[' + 'Element' + ']', 'color: green', element);
@@ -91,7 +91,7 @@
         try {
           result = handler.apply(elem, [event]);
         } catch (err) {
-          var errorName = 'Catched error - ' + 'click.' + ns;
+          let errorName = 'Catched error - ' + 'click.' + ns;
           console.groupCollapsed(errorName);
           console.log('%c[' + 'Event name' + ']', 'color: green', 'click.' + ns);
           console.log('%c[' + 'Element' + ']', 'color: green', element);

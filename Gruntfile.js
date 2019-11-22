@@ -126,6 +126,7 @@ module.exports = function (grunt) {
       options: {
         '-W069': true,
         '-W054': true,
+        'esversion': 6,
         globals: {
           jQuery: true
         }
@@ -179,7 +180,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify-es');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-http-server');
@@ -193,7 +194,7 @@ module.exports = function (grunt) {
     'concat',
     'uglify',
     'cssmin',
-  	'open',
+    'open',
     'jsdoc'
   ]);
 
