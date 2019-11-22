@@ -40,6 +40,7 @@ module.exports = function (grunt) {
     ];
 
   var banner = '/*! <%= pkg.name %> - <%= version %> */\n\n';
+  const sass = require('node-sass');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -65,7 +66,7 @@ module.exports = function (grunt) {
         app: 'Chrome'
       }
     },
- 	copy: {
+    copy: {
       assets: {
         files: [
           {
@@ -79,6 +80,13 @@ module.exports = function (grunt) {
               '**/*.jpg',
               '**/*.jpeg'
             ]
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/bootstrap/dist/css/',
+            src: 'bootstrap.*',
+            dest: 'dist',
+            filter: 'isFile'
           }
         ]
       },
@@ -86,10 +94,13 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            dest: 'fonts',
-            cwd: 'assets/fonts',
+            dest: 'dist/webfonts',
+            cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts',
             src: [
               '**/*.woff',
+              '**/*.woff2',
+              '**/*.eot',
+              '**/*.ttf',
             ]
           }
         ]
@@ -132,16 +143,14 @@ module.exports = function (grunt) {
         }
       }
     },
-    uglify: {
-      prod: {
-        options: {
-          banner: banner,
-          sourceMapIncludeSources: true
-        },
-        files: {
-          'dist/drawerJs.standalone.min.js': ['dist/drawerJs.standalone.js'],
-          'dist/drawerJs.redactor.min.js': ['dist/drawerJs.redactor.js']
-        }
+    terser: {
+      options: {
+        banner: banner,
+        sourceMapIncludeSources: true
+      },
+      files: {
+        'dist/drawerJs.standalone.min.js': ['dist/drawerJs.standalone.js'],
+        'dist/drawerJs.redactor.min.js': ['dist/drawerJs.redactor.js']
       }
     },
     cssmin: {
@@ -174,26 +183,39 @@ module.exports = function (grunt) {
         'concat',
         'jsdoc'
       ]
+    },
+    sass: {
+      options: {
+        implementation: sass,
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          'dist/fontawesome.min.css': 'external_src/fontawesome.sass'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify-es');
+  grunt.loadNpmTasks('grunt-terser');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-jsdoc');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('build', [
     'http-server',
     'copy',
     'jshint',
     'concat',
-    'uglify',
+    'terser',
     'cssmin',
+    'sass',
     'open',
     'jsdoc'
   ]);
@@ -202,7 +224,7 @@ module.exports = function (grunt) {
     'copy',
     'jshint',
     'concat',
-    'uglify',
+    'terser',
     'cssmin',
     'jsdoc'
   ]);
