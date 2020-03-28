@@ -1,9 +1,9 @@
 {
-  "name": "drawerjsV2",
+  "name": "@ds-ultimate/drawerjs",
   "version": "2.0.0",
   "author": "G-TAC Software UG",
-  "license": "COMMERCIAL",
-  "private": true,
+  "license": "",
+  "private": false,
   "dependencies": {},
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
@@ -26,5 +26,10 @@
   },
   "scripts": {
     "start": "node node_modules/grunt-cli/bin/grunt"
+  },
+  
+  "repository": "git://github.com/ds-ultimate/DrawerJs.git",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/ds-ultimate"
   }
 }
