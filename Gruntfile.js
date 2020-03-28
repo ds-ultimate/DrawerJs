@@ -144,13 +144,14 @@ module.exports = function (grunt) {
       }
     },
     terser: {
-      options: {
-        banner: banner,
-        sourceMapIncludeSources: true
-      },
-      files: {
-        'dist/drawerJs.standalone.min.js': ['dist/drawerJs.standalone.js'],
-        'dist/drawerJs.redactor.min.js': ['dist/drawerJs.redactor.js']
+      pages: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          'dist/drawerJs.standalone.min.js': ['dist/drawerJs.standalone.js'],
+          'dist/drawerJs.redactor.min.js': ['dist/drawerJs.redactor.js']
+        }
       }
     },
     cssmin: {
