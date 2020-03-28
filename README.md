@@ -1,3 +1,9 @@
+This is currently a fork with some little changes for our website
+
+The master branch is currently considered to be stable, but this may change when updating to fabricjs v3 (if we will do this)
+
+
+
 # DrawerJS
 
 DrawerJS is a HTML5 widget that allows drawing and writing on HTML5 canvas elements. Mobile devices are fully supported. 
