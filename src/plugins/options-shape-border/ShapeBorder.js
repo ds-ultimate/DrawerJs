@@ -86,20 +86,38 @@
           width: 1,
           preview: 'border-solid-thin.png'
         },
+        "Solid mid": {
+          width: 3,
+          preview: 'border-solid-mid.png'
+        },
         "Solid bold": {
           width: 5,
           preview: 'border-solid-bold.png'
+        },
+        "Solid extrabold": {
+          width: 9,
+          preview: 'border-solid-extrabold.png'
         },
         "Dashed thin": {
           width: 1,
           dashArray: [8, 8],
           preview: 'border-dashed-thin.png'
         },
+        "Dashed mid": {
+          width: 3,
+          dashArray: [8, 8],
+          preview: 'border-dashed-mid.png'
+        },
         "Dashed bold": {
           width: 5,
           dashArray: [8, 8],
           preview: 'border-dashed-bold.png'
-        }
+        },
+        "Dashed extrabold": {
+          width: 9,
+          dashArray: [8, 8],
+          preview: 'border-dashed-extrabold.png'
+        },
       },
       defaultBorder: "None"
     };
@@ -233,7 +251,7 @@
         this.borderBeforeLineShape = this.currentBorder;
 
         this.currentColor = this.drawer.activeColor;
-        this.currentBorder = this.options.borderTypes["Solid thin"];
+        this.currentBorder = this.options.borderTypes["Solid bold"];
         this.updateControls();
     } else if (this.colorBeforeLineShape !== undefined) {
         this.currentColor = this.colorBeforeLineShape;
